@@ -42,3 +42,8 @@ input[type="checkbox"]:hover + label {
 input[type="checkbox"]:checked + label {
   background: green;
 }
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+}
