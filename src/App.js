@@ -1,5 +1,6 @@
 import React from 'react'
 import DayRows from './DayRows'
+import DAY_PERIODS from './DayPeriods'
 import './App.css'
 
 class App extends React.Component {
@@ -18,15 +19,13 @@ class App extends React.Component {
   render () {
     return (
       <main>
-        <h1>Selecione a sua Disponibilizade</h1>
+        <h1>Selecione sua Disponibilizade</h1>
         <form onSubmit={this.parseData.bind(this)}>
           <table>
             <thead>
               <tr>
                 <th scope="col" class="screen-reader-only">Dia</th>
-                <th scope="col">Manhã</th>
-                <th scope="col">Tarde</th>
-                <th scope="col">Noite</th>
+                {DAY_PERIODS.map(dayPeriod => <th scope="col">{dayPeriod.longName}</th>)}
               </tr>
             </thead>
             <tbody>
