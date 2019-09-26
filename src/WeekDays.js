@@ -1,5 +1,10 @@
 export default [
   {
+    longName: "Domingo",
+    abbreviatedName: "Dom.",
+    shortName: "domingo"
+  },
+  {
     longName: "Segunda-feira",
     abbreviatedName: "Seg.",
     shortName: "segunda"
@@ -28,10 +33,5 @@ export default [
     longName: "Sábado",
     abbreviatedName: "Sáb.",
     shortName: "sabado"
-  },
-  {
-    longName: "Domingo",
-    abbreviatedName: "Dom.",
-    shortName: "domingo"
   }
 ]
