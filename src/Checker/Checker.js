@@ -1,12 +1,12 @@
-export default function checkAllFromIdFragment (period) {
-  const periodCheckboxes = document.querySelectorAll("input[id$='" + period + "']")
-  const everyCheckBoxIsLikeTheFirst = [...periodCheckboxes].every(checkbox => checkbox.checked === periodCheckboxes[0].checked)
+export default function checkAllFromIdFragment (idFragment) {
+  const allCheckboxes = document.querySelectorAll("input[id*='" + idFragment + "']")
+  const everyCheckBoxIsLikeTheFirst = [...allCheckboxes].every(checkbox => checkbox.checked === allCheckboxes[0].checked)
 
   if (everyCheckBoxIsLikeTheFirst) {
     // toggle everything
-    periodCheckboxes.forEach(checkbox => checkbox.checked = !checkbox.checked)
+    allCheckboxes.forEach(checkbox => checkbox.checked = !checkbox.checked)
   } else {
     // copy first one to the rest
-    periodCheckboxes.forEach(checkbox => checkbox.checked = periodCheckboxes[0].checked)
+    allCheckboxes.forEach(checkbox => checkbox.checked = allCheckboxes[0].checked)
   }
 }
