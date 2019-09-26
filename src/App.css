@@ -1,22 +1,44 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #09d3ac;
+table {
+  border-spacing: 10px;
+}
+
+td {
+  position: relative;
+}
+
+.screen-reader-only {
+  font-size: 0;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
+
+input[type="checkbox"] + label {
+  background: blue;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:hover + label {
+  background: yellow;
+}
+
+input[type="checkbox"]:checked + label {
+  background: green;
 }
