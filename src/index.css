@@ -11,3 +11,63 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  cursor: pointer;
+}
+
+table {
+  border-spacing: 10px;
+}
+
+td {
+  position: relative;
+}
+
+.screen-reader-only {
+  font-size: 0;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  margin: 5px;
+  outline: none;
+}
+
+input[type="checkbox"] + label {
+  background: #FFFFFF;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: inset 0 0 7px #2D9ECC;
+}
+
+input[type="checkbox"]:hover + label {
+  background: #91C2FF;
+}
+
+input[type="checkbox"]:checked + label {
+  background: #FFD352 url("./xis.png") no-repeat center center;
+  box-shadow: inset 0 0 5px #99976E;
+  text-align: center;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+}

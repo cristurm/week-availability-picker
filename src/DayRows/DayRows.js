@@ -1,6 +1,6 @@
 import React from 'react'
-import WEEK_DAYS from './WeekDays'
-import DAY_PERIODS from './DayPeriods'
+import WEEK_DAYS from '../Data/WeekDays'
+import DAY_PERIODS from '../Data/DayPeriods'
 
 const buildKey = (weekDay, dayPeriod) => weekDay.shortName + "-" + dayPeriod.shortName
 

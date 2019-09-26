@@ -1,7 +1,6 @@
 import React from 'react'
-import DayRows from './DayRows'
-import DAY_PERIODS from './DayPeriods'
-import './App.css'
+import DayRows from '../DayRows/DayRows'
+import DAY_PERIODS from '../Data/DayPeriods'
 
 class App extends React.Component {
   constructor(props) {
