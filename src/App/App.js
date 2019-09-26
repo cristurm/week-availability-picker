@@ -1,6 +1,7 @@
 import React from 'react'
 import DayRows from '../DayRows/DayRows'
 import DAY_PERIODS from '../Data/DayPeriods'
+import checkAllFromIdFragment from '../Checker/Checker'
 
 class App extends React.Component {
   constructor(props) {
@@ -15,19 +16,6 @@ class App extends React.Component {
     this.setState({disponibilidade: formData.getAll("disponibilidade")})
   }
 
-  checkAllFromDayPeriod (period) {
-    const periodCheckboxes = document.querySelectorAll("input[id$='" + period + "']")
-    const everyCheckBoxIsLikeTheFirst = [...periodCheckboxes].every(checkbox => checkbox.checked === periodCheckboxes[0].checked)
-
-    if (everyCheckBoxIsLikeTheFirst) {
-      // toggle everything
-      periodCheckboxes.forEach(checkbox => checkbox.checked = !checkbox.checked)
-    } else {
-      // copy first one to the rest
-      periodCheckboxes.forEach(checkbox => checkbox.checked = periodCheckboxes[0].checked)
-    }
-  }
-
   render () {
     return (
       <main>
@@ -39,7 +27,7 @@ class App extends React.Component {
                 <th scope="col" class="screen-reader-only">Dia</th>
                 {DAY_PERIODS.map(dayPeriod => (
                   <th scope="col">
-                    <button type="button" onClick={this.checkAllFromDayPeriod.bind(this, dayPeriod.shortName)}>{dayPeriod.longName}</button>
+                    <button type="button" onClick={checkAllFromIdFragment.bind(this, dayPeriod.shortName)}>{dayPeriod.longName}</button>
                   </th>
                 ))}
               </tr>

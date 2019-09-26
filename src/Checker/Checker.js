@@ -1,4 +1,4 @@
-export default checkAllFromIdFragment (period) {
+export default function checkAllFromIdFragment (period) {
   const periodCheckboxes = document.querySelectorAll("input[id$='" + period + "']")
   const everyCheckBoxIsLikeTheFirst = [...periodCheckboxes].every(checkbox => checkbox.checked === periodCheckboxes[0].checked)
 
