@@ -1,4 +1,4 @@
-export default [
+const WEEK_DAYS = [
   {
     longName: "Domingo",
     abbreviatedName: "Dom.",
@@ -35,3 +35,20 @@ export default [
     shortName: "sabado"
   }
 ]
+
+const DAY_PERIODS = [
+  {
+    longName: "Manhã",
+    shortName: "manha"
+  },
+  {
+    longName: "Tarde",
+    shortName: "tarde"
+  },
+  {
+    longName: "Noite",
+    shortName: "noite"
+  }
+]
+
+export { WEEK_DAYS, DAY_PERIODS }
